@@ -10,10 +10,7 @@ defaults:
 
 jobs:
   build:
-    # close 이벤트 중 merge일 때만 동작 && label이 [front] (id: 3141723409) 일때만 동작
-    if: (github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.id, 3141723409))
-        || github.event_name == 'workflow_dispatch'
-    runs-on: deploy-runner
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Source Code
         uses: actions/checkout@v2

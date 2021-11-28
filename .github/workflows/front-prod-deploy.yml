@@ -32,5 +32,5 @@ jobs:
           key: ${{ secrets.KEY }}
           source: "./frontend/front-deploy.tar"
           target: "/home/ubuntu/jujeol-jujeol/frontend"
-          strip-conponents: 1
+          strip-conponents: 2
           

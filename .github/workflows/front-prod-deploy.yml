@@ -29,5 +29,5 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           key: ${{ secrets.KEY }}
-          source: "./frontend/deploy.tar"
+          source: "./frontend/front-deploy.tar"
           target: "/home/ubuntu/jujeol-jujeol/frontend/deploy"

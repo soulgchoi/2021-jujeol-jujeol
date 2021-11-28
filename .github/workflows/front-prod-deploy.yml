@@ -30,6 +30,7 @@ jobs:
           username: ubuntu
           host: ${{ secrets.HOST }}
           key: ${{ secrets.KEY }}
-          source: "front-deploy.tar"
+          source: "./frontend/front-deploy.tar"
           target: "/home/ubuntu/jujeol-jujeol/frontend"
+          strip-conponents: 1
           

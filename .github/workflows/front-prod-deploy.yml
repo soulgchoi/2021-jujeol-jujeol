@@ -33,3 +33,11 @@ jobs:
           source: "./frontend/front-deploy.tar"
           target: "/home/ubuntu/jujeol-jujeol/frontend"
           strip_components: 2
+          
+      - name: Unzip deploy
+        uses: appleboy/ssh-action@master
+        with:
+          username: ubuntu
+          host: ${{ secrets.PROD_HOST }}
+          key: ${{ secrets.PROD_RSA_PRIVATE_KEY }}
+          script: tar -xvf deploy.tar
